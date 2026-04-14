@@ -1,0 +1,37 @@
+# ── Core Framework ────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9      # required for multipart file uploads
+aiofiles>=23.2.1             # async file I/O
+
+# ── Data Validation ───────────────────────────────────────────
+pydantic>=2.6.0
+
+# ── AI / ML — Embeddings + Vector Search ──────────────────────
+sentence-transformers>=2.7.0  # all-MiniLM-L6-v2 downloaded automatically
+faiss-cpu>=1.8.0              # vector index (swap for faiss-gpu on CUDA)
+
+# ── LLM — Ollama (no install needed here, Ollama handles it) ──
+# Ollama is a separate application: https://ollama.com/download
+# No Python package required — we call the REST API directly.
+
+# ── PDF Processing ────────────────────────────────────────────
+pymupdf>=1.24.0               # fast PDF parser + page renderer for OCR fallback
+# pdfplumber>=0.11.0            # alternative (uncomment if PyMuPDF fails)
+
+# ── OCR (for image PDFs and image uploads) ────────────────────
+pytesseract>=0.3.13           # Tesseract wrapper (requires Tesseract binary)
+Pillow>=10.3.0                # image I/O for OCR and PDF page rendering
+# easyocr>=1.7.1                # alternative OCR — no binary needed (larger download)
+
+# ── Utilities ─────────────────────────────────────────────────
+numpy>=1.26.0
+python-dotenv>=1.0.1          # auto-loads .env on startup
+
+# ── Audio transcription (optional) ────────────────────────────
+# openai-whisper                # uncomment to enable audio uploads
+
+# ── Dev / Testing ─────────────────────────────────────────────
+httpx>=0.27.0
+pytest>=8.1.0
+pytest-asyncio>=0.23.0

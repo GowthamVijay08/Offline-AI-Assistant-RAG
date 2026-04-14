@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Data (don't commit user uploads or large index files)
+data/uploads/
+data/faiss_index/
+data/graph.db
+logs/
+
+# Models (large binary files)
+models/*.gguf
+models/*.bin
+
+# Environment
+.env
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Build
+dist/
+build/
+*.egg-info/
